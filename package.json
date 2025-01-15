@@ -1,0 +1,35 @@
+{
+  "name": "@adobe/genstudio-uix-sdk",
+  "version": "1.0.0",
+  "description": "GenStudio UI Extensibility SDK",
+  "main": "src/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/genstudio-uix-sdk.git"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "uix",
+    "genstudio"
+  ],
+  "author": "Adobe, Inc,",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.6",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
