@@ -1,10 +1,14 @@
+**@adobe/genstudio-uix-sdk**
+
+***
+
 # genstudio-uix-sdk
 GenStudio UI Extensibility SDK
 
-**This repo is still WIP. Please use caution and reach out to GS team before using**
+**This repo will move to github.com/adobe**
 
 ## API Documentation
-[API Doc](./doc/api.md)
+[API Doc](_media/api.md)
 
 ## Usage
 ```
@@ -49,8 +53,8 @@ const experience: Experience = {
 
 ## Contributing
 
-Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING.md) for more information.
+Contributions are welcomed! Read the [Contributing Guide](_media/CONTRIBUTING.md) for more information.
 
 ## Licensing
 
-This project is licensed under the Apache V2 License. See [LICENSE](./LICENSE) for more information.
+This project is licensed under the Apache V2 License. See [LICENSE](_media/LICENSE) for more information.
