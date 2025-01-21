@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/genstudio-uix-sdk.git"
+    "url": "git+https://github.com/adobe/genstudio-uix-sdk.git"
   },
   "directories": {
     "doc": "doc",
