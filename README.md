@@ -13,7 +13,7 @@ npm install @adobe/genstudio-uix-sdk
 
 ## Import
 ```ts
-import { Experience, ExperienceField } from @adobe/genstudio-uix-sdk
+import { Experience, ExperienceField } from '@adobe/genstudio-uix-sdk'
 
 const experienceFields = new Map<string, ExperienceField>([
       [
