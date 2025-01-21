@@ -10,7 +10,6 @@ GenStudio UI Extensibility SDK
 ```
 npm install @adobe/genstudio-uix-sdk
 ```
-
 ## Import
 ```ts
 import { Experience, ExperienceField } from '@adobe/genstudio-uix-sdk'
