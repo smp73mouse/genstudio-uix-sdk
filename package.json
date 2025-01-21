@@ -1,6 +1,6 @@
 {
   "name": "@adobe/genstudio-uix-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "GenStudio UI Extensibility SDK",
   "main": "src/index.js",
   "repository": {
