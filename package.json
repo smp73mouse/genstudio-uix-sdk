@@ -11,6 +11,9 @@
     "doc": "doc",
     "test": "tests"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "semantic-release": "semantic-release",
