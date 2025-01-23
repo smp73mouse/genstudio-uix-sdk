@@ -2,7 +2,9 @@
   "name": "@adobe/genstudio-uix-sdk",
   "version": "1.0.2",
   "description": "GenStudio UI Extensibility SDK",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adobe/genstudio-uix-sdk.git"
@@ -16,6 +18,7 @@
   },
   "scripts": {
     "test": "jest",
+    "build": "tsc",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist docs",
     "docs": "rm -rf docs && typedoc -githubPages false"
