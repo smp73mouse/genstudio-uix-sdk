@@ -181,32 +181,32 @@ describe("contract", () => {
   });
 
   it("should define additionalContextValues", () => {
-    const additionalContextValues: AdditionalContextValues<Claim> = {
-      additionalContextValues: [{
+    const additionalContextValues: AdditionalContextValues<Claim> = [
+      {
         id: "12234",
         description: "my description",
-      }, {
+      },
+      {
         id: "12235",
         description: "my description 2",
-      }],
-    };
+      }
+    ];
     expect(additionalContextValues).toBeDefined();
-    expect(additionalContextValues.additionalContextValues[0].id).toBe("12234");
-    expect(additionalContextValues.additionalContextValues[0].description).toBe(
+    expect(additionalContextValues[0].id).toBe("12234");
+    expect(additionalContextValues[0].description).toBe(
       "my description"
     );
-    expect(additionalContextValues.additionalContextValues[1].id).toBe("12235");
-    expect(additionalContextValues.additionalContextValues[1].description).toBe(
+    expect(additionalContextValues[1].id).toBe("12235");
+    expect(additionalContextValues[1].description).toBe(
       "my description 2"
     );
   });
+
   it("should define additionalContexts", () => {
-    const additionalContextValues: AdditionalContextValues<Claim> = {
-      additionalContextValues: [{
-        id: "12234",
-        description: "my description",
-      }],
-    };
+    const additionalContextValues: AdditionalContextValues<Claim> = [{
+      id: "12234",
+      description: "my description",
+    }];
     const additionalContext: AdditionalContext<any> = {
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
@@ -221,12 +221,10 @@ describe("contract", () => {
   });
 
   it("should define SectionGenerationContext", () => {
-    const additionalContextValues: AdditionalContextValues<Claim> = {
-      additionalContextValues: [{
-        id: "12234",
-        description: "my description",
-      }],
-    };
+    const additionalContextValues: AdditionalContextValues<Claim> = [{
+      id: "12234",
+      description: "my description",
+    }];
     const additionalContext: AdditionalContext<any> = {
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
@@ -250,12 +248,10 @@ describe("contract", () => {
   });
 
   it("should define a single section generationContext", () => {
-    const additionalContextValues: AdditionalContextValues<Claim> = {
-      additionalContextValues: [{
-        id: "12234",
-        description: "my description",
-      }],
-    };
+    const additionalContextValues: AdditionalContextValues<Claim> = [{
+      id: "12234",
+      description: "my description",
+    }];
     const additionalContext: AdditionalContext<any> = {
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
@@ -294,12 +290,10 @@ describe("contract", () => {
   });
 
   it("should define a multi-section generationContext", () => {
-    const additionalContextValues: AdditionalContextValues<Claim> = {
-      additionalContextValues: [{
-        id: "12234",
-        description: "my description",
-      }],
-    };
+    const additionalContextValues: AdditionalContextValues<Claim> = [{
+      id: "12234",
+      description: "my description",
+    }];
     const additionalContext = {
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
@@ -343,16 +337,16 @@ describe("contract", () => {
 
   it("should define AppMetaData", () => {
     const appMetaData: AppMetaData = {
-        id: "1234",
-        label: "label",
-        extensionId: "extensionId",
-        iconDataUri: "iconDataUri",
-        supportedChannels: [
-            {
-                id: "Email",
-                name: "Email"
-            }
-        ]
+      id: "1234",
+      label: "label",
+      extensionId: "extensionId",
+      iconDataUri: "iconDataUri",
+      supportedChannels: [
+        {
+          id: "Email",
+          name: "Email"
+        }
+      ]
     }
     expect(appMetaData).toBeDefined();
     expect(appMetaData.id).toBe("1234");
@@ -371,24 +365,24 @@ describe("contract", () => {
       extensionId: "extensionId",
       iconDataUri: "iconDataUri",
       supportedChannels: [
-          Email,
-          Meta,
-          Display
+        Email,
+        Meta,
+        Display
       ]
-  }
-  expect(appMetaData).toBeDefined();
-  expect(appMetaData.id).toBe("1234");
-  expect(appMetaData.label).toBe("label");
-  expect(appMetaData.iconDataUri).toBe("iconDataUri");
-  expect(appMetaData.supportedChannels).toBeDefined();
-  expect(appMetaData.supportedChannels.length).toBe(3);
-  expect(appMetaData.supportedChannels[0].id).toBe("email");
-  expect(appMetaData.supportedChannels[0].name).toBe("Email");
-  expect(appMetaData.supportedChannels[1].id).toBe("meta");
-  expect(appMetaData.supportedChannels[1].name).toBe("Meta");
-  expect(appMetaData.supportedChannels[2].id).toBe("display");
-  expect(appMetaData.supportedChannels[2].name).toBe("Display");
-  expect(appMetaData.extensionId).toBe("extensionId");
+    }
+    expect(appMetaData).toBeDefined();
+    expect(appMetaData.id).toBe("1234");
+    expect(appMetaData.label).toBe("label");
+    expect(appMetaData.iconDataUri).toBe("iconDataUri");
+    expect(appMetaData.supportedChannels).toBeDefined();
+    expect(appMetaData.supportedChannels.length).toBe(3);
+    expect(appMetaData.supportedChannels[0].id).toBe("email");
+    expect(appMetaData.supportedChannels[0].name).toBe("Email");
+    expect(appMetaData.supportedChannels[1].id).toBe("meta");
+    expect(appMetaData.supportedChannels[1].name).toBe("Meta");
+    expect(appMetaData.supportedChannels[2].id).toBe("display");
+    expect(appMetaData.supportedChannels[2].name).toBe("Display");
+    expect(appMetaData.extensionId).toBe("extensionId");
   });
 
 });
