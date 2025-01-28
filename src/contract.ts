@@ -98,7 +98,7 @@ export type GenerationContext = {
   brand: Brand;
   product?: Product;
   persona: Persona;
-  sections?: SectionGenerationContext[];
+  sections?: SectionGenerationContext[]| undefined;
 };
 
 /** App MetaData */
