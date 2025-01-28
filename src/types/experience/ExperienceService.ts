@@ -66,33 +66,23 @@ export class ExperienceService {
     id?: string;
     fields: { [key: string]: any };
   }): Experience {
-    const experienceFields = new Map<string, ExperienceField>();
+    const experienceFields: Record<string, ExperienceField> = {};
 
-    // Convert each field in the raw experience to SDK ExperienceField format
     Object.entries(rawExperience.fields).forEach(([key, value]) => {
-        let fieldValue = '';
-        if (value !== null && value !== undefined) {
-            fieldValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
-        }
-
-        const field: ExperienceField = {
-            fieldName: key,
-            fieldValue,   
-            fieldRole: {
-                name: key
-            },
-            readonly: false
-        };
-        experienceFields.set(key, field); 
+      let fieldValue = '';
+      if (value !== null && value !== undefined) {
+        fieldValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
+      }
+      experienceFields[key] = {
+        fieldName: key,
+        fieldValue,
+      };
     });
 
-    // Convert Map to plain object before creating Experience
-    const experience: Experience = {
+    return {
       id: rawExperience.id ?? '',
-      experienceFields: Object.fromEntries(experienceFields)
+      experienceFields
     };
-
-    return experience;
   }
 
   /**

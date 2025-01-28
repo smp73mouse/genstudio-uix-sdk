@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { ExperienceService, ExperienceError, Experience, ExperienceField, FieldRole } from '../src';
+import { ExperienceService, ExperienceError, Experience, ExperienceField } from '../src';
 
 describe('SDK Exports', () => {
   it('should export ExperienceService', () => {
@@ -25,12 +25,9 @@ describe('SDK Exports', () => {
   });
 
   it('should export Experience types', () => {
-    // TypeScript will catch if these types aren't exported
     const field: ExperienceField = {
-      fieldRole: { name: 'test' },
       fieldName: 'test',
-      fieldValue: 'test',
-      readonly: false
+      fieldValue: 'test'
     };
     
     const experience: Experience = {
@@ -39,6 +36,6 @@ describe('SDK Exports', () => {
     };
 
     expect(experience.id).toBe('test');
-    expect(experience.experienceFields.test).toBe(field);
+    expect(experience.experienceFields.test).toEqual(field);
   });
 }); 

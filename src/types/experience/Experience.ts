@@ -9,26 +9,27 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
 /* this file defines types and interfaces that are considered as Experience api for extension consumers */
 
-/** Experience */
 /**
- * Represents the role of a field within an experience.
+ * Represents an Experience entity in the system.
+ * An Experience is a container for various fields that define its characteristics.
  */
-export type FieldRole = {
-    /** The name of the field role. */
-    name: string;
-};
-
-export type ExperienceField = {
-    fieldRole: FieldRole;
-    fieldName: string;
-    fieldValue: string | Object;
-    readonly: boolean;
-};
-
-export type Experience = {
+export interface Experience {
+    /** Unique identifier for the experience */
     id: string;
-    experienceFields: { [key: string]: ExperienceField };
-};
+    /** Collection of experience fields stored as key-value pairs */
+    experienceFields: Record<string, ExperienceField>;
+}
+
+/**
+ * Represents a field within an Experience.
+ * Each field contains a name and corresponding value.
+ */
+export interface ExperienceField {
+    /** Name of the experience field */
+    fieldName: string;
+    /** Value associated with the experience field */
+    fieldValue: string;
+}
+    

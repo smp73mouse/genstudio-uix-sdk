@@ -37,7 +37,6 @@ describe('ExperienceService', () => {
     fields: {
       name: 'Test Experience',
       description: 'Test Description',
-      date: '2024-03-20',
       complexField: { key: 'value' }
     }
   };
@@ -49,15 +48,11 @@ describe('ExperienceService', () => {
       expect(result.id).toBe('exp123');
       expect(result.experienceFields.name).toEqual({
         fieldName: 'name',
-        fieldValue: 'Test Experience',
-        fieldRole: { name: 'name' },
-        readonly: false
+        fieldValue: 'Test Experience'
       });
       expect(result.experienceFields.complexField).toEqual({
         fieldName: 'complexField',
-        fieldValue: '{"key":"value"}',
-        fieldRole: { name: 'complexField' },
-        readonly: false
+        fieldValue: '{"key":"value"}'
       });
     });
 
