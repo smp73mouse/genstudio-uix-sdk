@@ -30,11 +30,11 @@ export type ExperienceField = {
 
 export type Experience = {
   id: string;
-  experienceFields: Map<string, ExperienceField>;
+  experienceFields: { [key: string]: ExperienceField };
 };
 
-/** Generation Context */
 
+/** Generation Context */
 export const Email: Channel = {
   id: "email",
   name: "Email",
@@ -78,7 +78,6 @@ export type Claim = {
 export enum AdditionalContextTypes {
   Claims = "claims",
 }
-
 export type AdditionalContextValues<T> = T[];
 
 export type AdditionalContext<T> = {
@@ -99,8 +98,9 @@ export type GenerationContext = {
   brand: Brand;
   product?: Product;
   persona: Persona;
-  sections?: SectionGenerationContext[] | undefined;
+  sections?: SectionGenerationContext[]| undefined;
 };
+
 /** App MetaData */
 export type AppMetaData = {
   id: string;

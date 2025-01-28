@@ -6,14 +6,8 @@
 
 # Type Alias: AdditionalContextValues\<T\>
 
-> **AdditionalContextValues**\<`T`\>: \{ `additionalContextValues`: `T`[]; \}
+> **AdditionalContextValues**\<`T`\>: `T`[]
 
 ## Type Parameters
 
 • **T**
-
-## Type declaration
-
-### additionalContextValues
-
-> **additionalContextValues**: `T`[]

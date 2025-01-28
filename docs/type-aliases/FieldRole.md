@@ -8,10 +8,12 @@
 
 > **FieldRole**: \{ `name`: `string`; \}
 
-Experience
+Represents the role of a field within an experience.
 
 ## Type declaration
 
 ### name
 
 > **name**: `string`
+
+The name of the field role.
