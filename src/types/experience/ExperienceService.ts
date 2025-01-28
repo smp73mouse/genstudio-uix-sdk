@@ -33,7 +33,7 @@ export class ExperienceError extends Error {
 /**
  * Manages experience data conversion and retrieval
  */
-export class ExperienceManager {
+export class ExperienceService {
 
   /**
    * Fetches experiences from the connection

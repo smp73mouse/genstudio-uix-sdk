@@ -10,12 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { ExperienceManager, ExperienceError, Experience, ExperienceField, FieldRole } from '../src';
+import { ExperienceService, ExperienceError, Experience, ExperienceField, FieldRole } from '../src';
 
 describe('SDK Exports', () => {
-  it('should export ExperienceManager', () => {
-    expect(ExperienceManager).toBeDefined();
-    expect(typeof ExperienceManager.getExperiences).toBe('function');
+  it('should export ExperienceService', () => {
+    expect(ExperienceService).toBeDefined();
+    expect(typeof ExperienceService.getExperiences).toBe('function');
   });
 
   it('should export ExperienceError', () => {
