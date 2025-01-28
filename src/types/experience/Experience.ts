@@ -10,6 +10,25 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-export * from './contract';
-export * from './types/experience/Experience';
-export { ExperienceManager, ExperienceError } from './types/experience/ExperienceManager';
+/* this file defines types and interfaces that are considered as Experience api for extension consumers */
+
+/** Experience */
+/**
+ * Represents the role of a field within an experience.
+ */
+export type FieldRole = {
+    /** The name of the field role. */
+    name: string;
+};
+
+export type ExperienceField = {
+    fieldRole: FieldRole;
+    fieldName: string;
+    fieldValue: string | Object;
+    readonly: boolean;
+};
+
+export type Experience = {
+    id: string;
+    experienceFields: { [key: string]: ExperienceField };
+};

@@ -18,6 +18,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "tsc",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist docs",
@@ -30,6 +31,8 @@
   "author": "Adobe, Inc,",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/uix-core": "^1.0.0",
+    "@adobe/uix-guest": "^1.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.14",
@@ -44,6 +47,14 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "lcov", "html"],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/index.ts",
+      "!src/**/*.d.ts"
+    ]
   }
 }
