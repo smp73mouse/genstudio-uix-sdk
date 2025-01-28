@@ -8,7 +8,7 @@
 
 > **AppMetaData**: \{ `extensionId`: `string`; `iconDataUri`: `string`; `id`: `string`; `label`: `string`; `supportedChannels`: [`Channel`](Channel.md)[]; \}
 
-App Metadata
+App MetaData
 
 ## Type declaration
 

@@ -5,16 +5,15 @@
 # genstudio-uix-sdk
 GenStudio UI Extensibility SDK
 
-**This repo will move to github.com/adobe**
+**This repo is still WIP. Please use caution and reach out to GS team before using**
 
 ## API Documentation
-[API Doc](_media/api.md)
+[API Doc](./doc/api.md)
 
 ## Usage
 ```
 npm install @adobe/genstudio-uix-sdk
 ```
-
 ## Import
 ```ts
 import { Experience, ExperienceField } from '@adobe/genstudio-uix-sdk'

@@ -6,13 +6,17 @@
 
 # Type Alias: Experience
 
-> **Experience**: \{ `experienceFields`: `Map`\<`string`, [`ExperienceField`](ExperienceField.md)\>; `id`: `string`; \}
+> **Experience**: \{ `experienceFields`: \{\}; `id`: `string`; \}
 
 ## Type declaration
 
 ### experienceFields
 
-> **experienceFields**: `Map`\<`string`, [`ExperienceField`](ExperienceField.md)\>
+> **experienceFields**: \{\}
+
+#### Index Signature
+
+\[`key`: `string`\]: [`ExperienceField`](ExperienceField.md)
 
 ### id
 

@@ -72,59 +72,53 @@ describe("contract", () => {
   });
 
   it("should define Experience", () => {
-    const experienceFields = new Map<string, ExperienceField>([
-      [
-        "subject",
-        {
-          fieldRole: {
-            name: "subject",
-          },
-          fieldName: "subject",
-          fieldValue: "test field value",
-          readonly: false,
+    const experienceFields: Record<string, ExperienceField> = {
+      subject: {
+        fieldRole: {
+          name: "subject",
         },
-      ],
-      [
-        "section2_image",
-        {
-          fieldRole: {
-            name: "image",
-          },
-          fieldName: "section2_image",
-          fieldValue: {
-            test: "1",
-          },
-          readonly: true,
+        fieldName: "subject",
+        fieldValue: "test field value",
+        readonly: false,
+      },
+      section2_image: {
+        fieldRole: {
+          name: "image",
         },
-      ],
-    ]);
+        fieldName: "section2_image",
+        fieldValue: {
+          test: "1",
+        },
+        readonly: true,
+      },
+    }
     const experience: Experience = {
       id: "230853274642",
       experienceFields: experienceFields,
     };
     expect(experience).toBeDefined();
     expect(experience.id).toBe("230853274642");
-    expect(experience.experienceFields).toBeInstanceOf(Map);
-    expect(experience.experienceFields.size).toBe(2);
-    expect(experience.experienceFields.get("subject")).toBeDefined();
-    expect(experience.experienceFields.get("subject")?.fieldRole.name).toBe(
+    expect(experience.experienceFields).toBeInstanceOf(Object);
+    expect(Object.keys(experience.experienceFields).length).toBe(2);
+    expect(experience.experienceFields.subject).toBeDefined();
+    expect(experience.experienceFields.subject?.fieldRole.name).toBe(
       "subject"
     );
-    expect(experience.experienceFields.get("subject")?.fieldName).toBe(
+    expect(experience.experienceFields.subject?.fieldName).toBe(
       "subject"
     );
-    expect(experience.experienceFields.get("subject")?.fieldValue).toBe(
+    expect(experience.experienceFields.subject?.fieldValue).toBe(
       "test field value"
     );
-    expect(experience.experienceFields.get("section2_image")).toBeDefined();
+    expect(experience.experienceFields.section2_image).toBeDefined();
     expect(
-      experience.experienceFields.get("section2_image")?.fieldRole.name
+      experience.experienceFields.section2_image?.fieldRole.name
     ).toBe("image");
-    expect(experience.experienceFields.get("section2_image")?.fieldName).toBe(
+    expect(experience.experienceFields.section2_image?.fieldName).toBe(
       "section2_image"
     );
     expect(
-      experience.experienceFields.get("section2_image")?.fieldValue
+      experience.experienceFields.section2_image?.fieldValue
     ).toEqual({
       test: "1",
     });
