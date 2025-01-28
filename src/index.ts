@@ -11,3 +11,5 @@ governing permissions and limitations under the License.
 */
 
 export * from './contract';
+export * from './types/experience/Experience';
+export { ExperienceService, ExperienceError } from './types/experience/ExperienceService';
