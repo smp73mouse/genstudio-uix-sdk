@@ -10,9 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { Experience, ExperienceField, FieldRole } from "../../../../src/types/Experience";
+import { Experience, ExperienceField, FieldRole } from '../../../src/types/experience/Experience';
 
-it("should define FieldRole", () => {
+describe('Experience Types', () => {
+  it("should define FieldRole", () => {
     const fieldRole: FieldRole = {
       name: "subject",
     };
@@ -104,3 +105,4 @@ it("should define FieldRole", () => {
       test: "1",
     });
   });
+});

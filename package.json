@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "GenStudio UI Extensibility SDK",
   "engines": {
-    "node": ">=18.0.0",
+    "node": ">=20.0.0",
     "npm": ">=9.0.0"
   },
   "main": "dist/index.js",
@@ -49,9 +49,7 @@
     "typescript": "^5.7.3",
     "typedoc": "^0.27.0",
     "typedoc-plugin-markdown": "^4.0.1",
-    "typedoc-plugin-zod": "^1.1.2",
-    "ajv": "^8.17.1",
-    "js-yaml": "^4.1.0"
+    "typedoc-plugin-zod": "^1.1.2"
   },
   "jest": {
     "preset": "ts-jest",
