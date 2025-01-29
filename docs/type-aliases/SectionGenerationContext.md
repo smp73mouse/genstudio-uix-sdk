@@ -6,18 +6,18 @@
 
 # Type Alias: SectionGenerationContext
 
-> **SectionGenerationContext**: \{ `additionalContexts`: `Map`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>; `id`: `string`; `product`: [`Product`](Product.md); \}
+> **SectionGenerationContext**: \{ `additionalContexts`: `Record`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>; `id`: `string`; `product`: [`Product`](Product.md); \}
 
 ## Type declaration
 
-### additionalContexts
+### additionalContexts?
 
-> **additionalContexts**: `Map`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>
+> `optional` **additionalContexts**: `Record`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>
 
 ### id
 
 > **id**: `string`
 
-### product
+### product?
 
-> **product**: [`Product`](Product.md)
+> `optional` **product**: [`Product`](Product.md)

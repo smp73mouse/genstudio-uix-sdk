@@ -6,29 +6,29 @@
 
 # Type Alias: GenerationContext
 
-> **GenerationContext**: \{ `additionalContexts`: `Map`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>; `brand`: [`Brand`](Brand.md); `channel`: [`Channel`](Channel.md); `id`: `string`; `persona`: [`Persona`](Persona.md); `product`: [`Product`](Product.md); `sections`: [`SectionGenerationContext`](SectionGenerationContext.md)[]; \}
+> **GenerationContext**: \{ `additionalContexts`: `Record`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>; `brand`: [`Brand`](Brand.md); `channel`: [`Channel`](Channel.md); `id`: `string`; `persona`: [`Persona`](Persona.md); `product`: [`Product`](Product.md); `sections`: [`SectionGenerationContext`](SectionGenerationContext.md)[]; \}
 
 ## Type declaration
 
 ### additionalContexts?
 
-> `optional` **additionalContexts**: `Map`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>
+> `optional` **additionalContexts**: `Record`\<`string`, [`AdditionalContext`](AdditionalContext.md)\<`any`\>\>
 
-### brand
+### brand?
 
-> **brand**: [`Brand`](Brand.md)
+> `optional` **brand**: [`Brand`](Brand.md)
 
-### channel
+### channel?
 
-> **channel**: [`Channel`](Channel.md)
+> `optional` **channel**: [`Channel`](Channel.md)
 
 ### id
 
 > **id**: `string`
 
-### persona
+### persona?
 
-> **persona**: [`Persona`](Persona.md)
+> `optional` **persona**: [`Persona`](Persona.md)
 
 ### product?
 
