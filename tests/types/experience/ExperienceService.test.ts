@@ -149,5 +149,26 @@ describe('ExperienceService', () => {
         .rejects
         .toThrow('Connection is required to get experiences');
     });
+    it('should handle already converted experiences', async () => {
+      const mockGetExperiences = jest.fn().mockResolvedValue([{
+        id: 'exp123',
+        experienceFields: {
+          name: {
+            fieldName: 'name',
+            fieldValue: 'Test Experience'
+          }
+        }
+      }]);
+      const mockConnection = createMockConnection(mockGetExperiences);
+
+      const results = await ExperienceService.getExperiences(mockConnection);
+      
+      expect(results).toHaveLength(1);
+      expect(results[0].id).toBe('exp123');
+      expect(results[0].experienceFields.name).toEqual({
+        fieldName: 'name',
+        fieldValue: 'Test Experience'
+      });
+    });
   });
 }); 
