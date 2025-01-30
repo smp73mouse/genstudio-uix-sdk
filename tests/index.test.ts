@@ -32,6 +32,8 @@ import {
   SectionGenerationContext,
 } from "../src";
 
+const TEST_EXTENSION_ID = "test-extension-id";
+
 describe("SDK Exports", () => {
   it("should export ExperienceService", () => {
     expect(ExperienceService).toBeDefined();
@@ -144,6 +146,7 @@ describe("SDK Exports", () => {
     expect(additionalContextValues.length).toBe(1);
 
     const additionalContext: AdditionalContext<Claim> = {
+      extensionId: TEST_EXTENSION_ID,
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues,
     };
