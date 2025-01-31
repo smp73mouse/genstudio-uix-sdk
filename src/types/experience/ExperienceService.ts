@@ -53,7 +53,7 @@ export class ExperienceService {
       // @ts-ignore Remote API is handled through postMessage
       const experiences = await connection.host.api.createRightPanel.getExperiences();
 
-      // check if experiences is arlready of type Experience[]
+      // check if experiences is already of type Experience[]
       if (
         experiences &&
         experiences.length > 0 &&
