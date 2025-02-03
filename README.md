@@ -1,6 +1,5 @@
 # genstudio-uix-sdk
 GenStudio UI Extensibility SDK
-
 **This repo is still WIP. Please use caution and reach out to GS team before using**
 
 ## API Documentation
