@@ -41,6 +41,7 @@ export enum AdditionalContextTypes {
 export type AdditionalContextValues<T> = T[];
 
 export type AdditionalContext<T> = {
+  extensionId: string;
   additionalContextType: AdditionalContextTypes;
   additionalContextValues: AdditionalContextValues<T>;
 };

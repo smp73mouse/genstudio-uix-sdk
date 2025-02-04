@@ -6,7 +6,7 @@
 
 # Type Alias: AdditionalContext\<T\>
 
-> **AdditionalContext**\<`T`\>: \{ `additionalContextType`: [`AdditionalContextTypes`](../enumerations/AdditionalContextTypes.md); `additionalContextValues`: [`AdditionalContextValues`](AdditionalContextValues.md)\<`T`\>; \}
+> **AdditionalContext**\<`T`\>: \{ `additionalContextType`: [`AdditionalContextTypes`](../enumerations/AdditionalContextTypes.md); `additionalContextValues`: [`AdditionalContextValues`](AdditionalContextValues.md)\<`T`\>; `extensionId`: `string`; \}
 
 ## Type Parameters
 
@@ -21,3 +21,7 @@
 ### additionalContextValues
 
 > **additionalContextValues**: [`AdditionalContextValues`](AdditionalContextValues.md)\<`T`\>
+
+### extensionId
+
+> **extensionId**: `string`

@@ -22,6 +22,8 @@ import {
   GenerationContext,
 } from "../../../src/types/generationContext/GenerationContext";
 
+const TEST_EXTENSION_ID = "test-extension-id";
+
 describe("contract", () => {
   it("should define Brand", () => {
     const brand: Brand = {
@@ -89,6 +91,7 @@ describe("contract", () => {
       },
     ];
     const additionalContext: AdditionalContext<any> = {
+      extensionId: TEST_EXTENSION_ID,
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
     };
@@ -109,6 +112,7 @@ describe("contract", () => {
       },
     ];
     const additionalContext: AdditionalContext<any> = {
+      extensionId: TEST_EXTENSION_ID,
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
     };
@@ -140,6 +144,7 @@ describe("contract", () => {
       },
     ];
     const additionalContext: AdditionalContext<any> = {
+      extensionId: TEST_EXTENSION_ID,
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
     };
@@ -184,6 +189,7 @@ describe("contract", () => {
       },
     ];
     const additionalContext = {
+      extensionId: TEST_EXTENSION_ID,
       additionalContextType: AdditionalContextTypes.Claims,
       additionalContextValues: additionalContextValues,
     };
