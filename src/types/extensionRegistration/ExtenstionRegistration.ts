@@ -53,7 +53,7 @@ export class ExtensionRegistrationService {
   static async openCreateAddOnBar(guestConnection: any, appExtensionId: string) {
     // support old and new api
     try {
-        await Promise.all([
+        await Promise.allSettled([
             guestConnection?.host?.api?.createAddOnBar?.openDialog(`${appExtensionId}`),
             guestConnection?.host?.api?.dialogs?.open(`${appExtensionId}`)
         ]);
@@ -70,7 +70,7 @@ export class ExtensionRegistrationService {
   static async openAddContextAddOnBar(guestConnection: any, appExtensionId: string) {
     // support old and new api                 
     try {
-        await Promise.all([
+        await Promise.allSettled([
             guestConnection?.host?.api?.dialogs_context?.open(`${appExtensionId}`),
             guestConnection?.host?.api?.createContextAddOns?.openDialog(`${appExtensionId}`)
         ]);
