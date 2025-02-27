@@ -66,4 +66,14 @@ export class ExtensionRegistrationService {
     return guestConnection.host.api.dialogs_context.open(`${appExtensionId}`);
     // return guestConnection.host.api.createContextAddOns.openDialog(`${appExtensionId}`);
   }
+
+  /**
+   * close the add context add on dialog
+   * @param guestConnection - the guest connection
+   */
+  static closeAddContextAddOnBar(guestConnection: any) {
+    // support only old api for now
+    return guestConnection.host.api.dialogs_context.close();
+    // return guestConnection.host.api.createContextAddOns.closeDialog();
+  }
 }
